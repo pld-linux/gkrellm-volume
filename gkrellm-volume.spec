@@ -9,8 +9,9 @@ License:	GPL
 Group:		X11/Applications
 Source0:	http://gkrellm.luon.net/files/%{name}-%{version}.tar.gz
 # Source0-md5:	1a6c6fb0181fecfaa20fc5c9e58f39fc
-BuildRequires:	gkrellm-devel
-BuildRequires:	gtk+2-devel
+BuildRequires:	gkrellm-devel >= 2.0
+BuildRequires:	gtk+2-devel >= 2.0.0
+BuildRequires:	pkgconfig
 Requires:	gkrellm >= 2.0.4
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
