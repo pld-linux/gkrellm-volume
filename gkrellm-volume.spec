@@ -13,8 +13,6 @@ BuildRequires:	gkrellm-devel
 BuildRequires:	gtk+2-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
-%define		_prefix		/usr/X11R6
-%define		_mandir		%{_prefix}/man
 
 %description
 A GKrellM plugin wich allows you to control the (OSS) mixer devices of
