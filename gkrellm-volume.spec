@@ -2,16 +2,15 @@ Summary:	volume plugin for gkrellm
 Summary(pl):	Wtyczka kontroli g³o¶no¶ci dla gkrellm
 Summary(pt_BR):	Plugin gkrellm para controle do volume de dispositivos de som
 Name:		gkrellm-volume
-Version:	0.8
-Release:	4
+Version:	2.1.0
+Release:	1
 Epoch:		1
 License:	GPL
 Group:		X11/Applications
-Source0:	http://gkrellm.luon.net/files/volume-%{version}.tar.gz
-Requires:	gkrellm >= 1.0.2
+Source0:	http://gkrellm.luon.net/files/%{name}-%{version}.tar.gz
+Requires:	gkrellm >= 2.0.4
 BuildRequires:	gkrellm-devel
-BuildRequires:	gtk+-devel
-BuildRequires:	imlib-devel
+BuildRequires:	gtk+2-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define		_prefix		/usr/X11R6
@@ -28,16 +27,15 @@ Wtyczka GKrellM pozwalaj±ca kontrolowaæ ustawienia miksera (OSS).
 Plugin gkrellm para controle do volume de dispositivos de som (OSS).
 
 %prep
-%setup -q -n volume
+%setup -q -n %{name}
 
 %build
-%{__make} \
-	CC="%{__cc} %{rpmcflags} `gtk-config --cflags` `imlib-config --cflags-gdk`"
+%{__make} 
 
 %install
 rm -rf $RPM_BUILD_ROOT
 
-install -D volume.so %{buildroot}%{_libdir}/gkrellm/volume.so
+install -D volume.so %{buildroot}%{_libdir}/gkrellm2/volume.so
 
 gzip -9nf README Changelog
 
@@ -47,4 +45,4 @@ rm -rf %{buildroot}
 %files
 %defattr(644,root,root,755)
 %doc *.gz
-%attr(755,root,root) %{_libdir}/gkrellm/volume.so
+%attr(755,root,root) %{_libdir}/gkrellm2/volume.so
