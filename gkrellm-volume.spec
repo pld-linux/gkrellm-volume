@@ -3,7 +3,7 @@ Summary(pl):	Wtyczka kontroli g³o¶no¶ci dla gkrellm
 Summary(pt_BR):	Plugin gkrellm para controle do volume de dispositivos de som
 Name:		gkrellm-volume
 Version:	0.8
-Release:	3
+Release:	4
 Epoch:		1
 License:	GPL
 Group:		X11/Applications
@@ -37,7 +37,7 @@ Plugin gkrellm para controle do volume de dispositivos de som (OSS).
 %install
 rm -rf $RPM_BUILD_ROOT
 
-install -D volume.so %{buildroot}%{_libdir}/gkrellm/plugins/volume.so
+install -D volume.so %{buildroot}%{_libdir}/gkrellm/volume.so
 
 gzip -9nf README Changelog
 
@@ -47,4 +47,4 @@ rm -rf %{buildroot}
 %files
 %defattr(644,root,root,755)
 %doc *.gz
-%attr(755,root,root) %{_libdir}/gkrellm/plugins/volume.so
+%attr(755,root,root) %{_libdir}/gkrellm/volume.so
