@@ -28,7 +28,7 @@ Plugin gkrellm para controle do volume de dispositivos de som (OSS).
 %setup -q -n %{name}
 
 %build
-%{__make} 
+%{__make}
 
 %install
 rm -rf $RPM_BUILD_ROOT
