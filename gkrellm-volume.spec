@@ -8,6 +8,7 @@ Epoch:		1
 License:	GPL
 Group:		X11/Applications
 Source0:	http://gkrellm.luon.net/files/%{name}-%{version}.tar.gz
+# Source0-md5:	34368b3713a56ead63adfb678aba9186
 Requires:	gkrellm >= 2.0.4
 BuildRequires:	gkrellm-devel
 BuildRequires:	gtk+2-devel
