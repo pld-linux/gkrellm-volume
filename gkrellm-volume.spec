@@ -9,9 +9,9 @@ License:	GPL
 Group:		X11/Applications
 Source0:	http://gkrellm.luon.net/files/%{name}-%{version}.tar.gz
 # Source0-md5:	1a6c6fb0181fecfaa20fc5c9e58f39fc
-Requires:	gkrellm >= 2.0.4
 BuildRequires:	gkrellm-devel
 BuildRequires:	gtk+2-devel
+Requires:	gkrellm >= 2.0.4
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -28,15 +28,16 @@ Plugin gkrellm para controle do volume de dispositivos de som (OSS).
 %setup -q -n %{name}
 
 %build
-%{__make}
+%{__make} \
+	CC="%{__cc} \$(FLAGS) %{rpmcflags}"
 
 %install
 rm -rf $RPM_BUILD_ROOT
 
-install -D volume.so %{buildroot}%{_libdir}/gkrellm2/plugins/volume.so
+install -D volume.so $RPM_BUILD_ROOT%{_libdir}/gkrellm2/plugins/volume.so
 
 %clean
-rm -rf %{buildroot}
+rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
