@@ -29,6 +29,9 @@ Plugin gkrellm para controle do volume de dispositivos de som (OSS).
 
 %build
 %{__make} \
+	GKRELLM_INCLUDE=`pkg-config --cflags gkrellm` \
+	PLUGIN_DIR=%{_libdir}/gkrellm2/plugins \
+	LOCALEDIR=%{_datadir}/locale \
 	CC="%{__cc} \$(FLAGS) %{rpmcflags}"
 
 %install
