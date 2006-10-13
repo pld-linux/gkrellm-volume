@@ -1,0 +1,19 @@
+diff -ruN gkrellm-volume./Makefile gkrellm-volume/Makefile
+--- gkrellm-volume./Makefile	2004-08-19 22:07:27.000000000 +0200
++++ gkrellm-volume/Makefile	2006-10-13 20:22:05.916562143 +0200
+@@ -3,7 +3,6 @@
+ PACKAGE ?= gkrellm-volume
+ LOCALEDIR ?= /usr/local/share/locale
+ 
+-FLAGS += -DPACKAGE="\"$(PACKAGE)\"" 
+ export PACKAGE LOCALEDIR
+ 
+ GTK_CONFIG = pkg-config gtk+-2.0
+@@ -28,6 +27,7 @@
+ 
+ ifeq ($(enable_nls),1)
+     FLAGS += -DENABLE_NLS -DLOCALEDIR=\"$(LOCALEDIR)\"
++    FLAGS += -DPACKAGE="\"$(PACKAGE)\"" 
+     export enable_nls
+ endif
+ 
