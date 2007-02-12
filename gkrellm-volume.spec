@@ -1,6 +1,6 @@
 Summary:	volume plugin for gkrellm
-Summary(pl):	Wtyczka kontroli g³o¶no¶ci dla gkrellm
-Summary(pt_BR):	Plugin gkrellm para controle do volume de dispositivos de som
+Summary(pl.UTF-8):   Wtyczka kontroli gÅ‚oÅ›noÅ›ci dla gkrellm
+Summary(pt_BR.UTF-8):   Plugin gkrellm para controle do volume de dispositivos de som
 Name:		gkrellm-volume
 Version:	2.1.0
 Release:	1
@@ -20,10 +20,10 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 A GKrellM plugin wich allows you to control the (OSS) mixer devices of
 you choice.
 
-%description -l pl
-Wtyczka GKrellM pozwalaj±ca kontrolowaæ ustawienia miksera (OSS).
+%description -l pl.UTF-8
+Wtyczka GKrellM pozwalajÄ…ca kontrolowaÄ‡ ustawienia miksera (OSS).
 
-%description -l pt_BR
+%description -l pt_BR.UTF-8
 Plugin gkrellm para controle do volume de dispositivos de som (OSS).
 
 %prep
