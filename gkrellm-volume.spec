@@ -1,6 +1,6 @@
 Summary:	Sound volume plugin for gkrellm
-Summary(pl.UTF-8):   Wtyczka kontroli głośności dla gkrellm
-Summary(pt_BR.UTF-8):   Plugin gkrellm para controle do volume de dispositivos de som
+Summary(pl.UTF-8):	Wtyczka kontroli głośności dla gkrellm
+Summary(pt_BR.UTF-8):	Plugin gkrellm para controle do volume de dispositivos de som
 Name:		gkrellm-volume
 Version:	2.1.13
 Release:	3
